@@ -82,7 +82,7 @@ sudo systemctl start kubelet
 sudo kubeadm config images pull
 
 sudo kubeadm init
-
+# sudo kubeadm reset - to reset kubeadm (if you relaunch instance usin AMI then first reset the kubeadm and then init)
 mkdir -p "$HOME"/.kube
 sudo cp -i /etc/kubernetes/admin.conf "$HOME"/.kube/config
 sudo chown "$(id -u)":"$(id -g)" "$HOME"/.kube/config
